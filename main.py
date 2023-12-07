@@ -26,9 +26,10 @@ async def do_and_save_result(
     result = do_operation.delay(x, y, operator)
     task_id = len(task_results) + 1
     task_results[task_id] = result.id
-
+    # Ждем завершения задачи и получаем результат
+    task_result = result.get()
     return templates.TemplateResponse(
-        "result.html", {"request": request, "task_id": task_id, "result": result.id}
+        "result.html", {"request": request, "task_id": task_id, "result": task_result}
     )
 
 
