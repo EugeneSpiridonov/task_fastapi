@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Вкатываемся в IT!</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+	</head>
+	<body>
+		<h1>Статусы задач</h1>
+		<ul>
+			{% for task_id in task_statuses %}
+			<li><a href="/result/{{ task_id }}">Задача {{ task_id }}</a></li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>

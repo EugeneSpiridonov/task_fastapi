@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Вкатываемся в IT!</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+	</head>
+	<body>
+		<h1>Крутой асинхронный калькулятор!</h1>
+		<form method="post" action="/do/">
+			<label for="x">Число 1:</label>
+			<input type="text" name="x" required />
+			<label for="y">Число 2:</label>
+			<input type="text" name="y" required />
+			<label for="operator">Оператор:</label>
+			<input type="text" name="operator" required />
+			<button type="submit">Рассчитать!</button>
+		</form>
+		<div>
+			<a href="http://127.0.0.1:8000/status/">Посмотреть статус всех задач</a>
+		</div>
+	</body>
+</html>
